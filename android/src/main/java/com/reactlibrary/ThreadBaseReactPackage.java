@@ -15,6 +15,7 @@ import com.facebook.react.modules.netinfo.NetInfoModule;
 import com.facebook.react.modules.network.NetworkingModule;
 import com.facebook.react.modules.storage.AsyncStorageModule;
 import com.facebook.react.modules.systeminfo.AndroidInfoModule;
+import com.facebook.react.modules.deviceinfo.DeviceInfoModule;
 import com.facebook.react.modules.vibration.VibrationModule;
 import com.facebook.react.modules.websocket.WebSocketModule;
 import com.facebook.react.uimanager.ViewManager;
@@ -36,6 +37,7 @@ public class ThreadBaseReactPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(
                 // Core list
                 new AndroidInfoModule(catalystApplicationContext),
+                new DeviceInfoModule(catalystApplicationContext),
                 new ExceptionsManagerModule(reactInstanceManager.getDevSupportManager()),
                 new AppStateModule(catalystApplicationContext),
                 new Timing(catalystApplicationContext, reactInstanceManager.getDevSupportManager()),
